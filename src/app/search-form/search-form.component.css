@@ -1,0 +1,28 @@
+.search-form{
+    padding:20px;
+    display: table;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top:20px;
+  margin-bottom:20px;
+    border:1px solid grey;
+   background-color: teal;
+   color:white;
+    width:80%;
+    text-align: center;
+    height:100px;
+    
+}
+
+button{
+    background-color:orange;
+    
+}
+.search-form .col-xs-3{
+    padding-right:10px;
+}
+#sform{
+    display:table;
+    margin-left:auto;
+    margin-right:auto;
+}

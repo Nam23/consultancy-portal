@@ -1,0 +1,15 @@
+<app-search-form></app-search-form>
+<div class="container">
+<div class="search-count">
+    {{consultants.length}} result(s) found
+</div>
+<div class="result-page">
+    <ul *ngFor="let consultant of consultants">
+        <li>
+            Name: {{consultant.name}}<br>
+            Location:{{consultant.location}}<br>
+            Industry:{{consultant.Industry}}
+        </li>
+    </ul>
+</div>
+</div>

@@ -1,0 +1,41 @@
+.column2{
+    background-color:teal;
+    width:100%;
+    height:400px;
+    color:white;
+    /* border-radius:15px; */
+}
+.column2 div{
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+.column1 div{
+    display: table;
+    
+    border-top-width: 1px solid;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+.column1 .inner-para{
+     padding-top:20px;
+     padding-bottom:20px;
+     
+
+}
+.column1{
+    width:100%;
+    height:400px;
+    color:teal;
+    border-top:0.5 px solid grey;
+}
+.column2 .inner-para{
+     padding-top:20px;
+     padding-bottom:20px;
+     
+
+}
+app-search-form{
+ z-index: 1;
+}
