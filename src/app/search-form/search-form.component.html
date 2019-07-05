@@ -29,21 +29,23 @@
                             <option value="Marketing">Marketing</option>
                             <option value="Fine Arts">Fine Arts</option>
                         </select>
-                            <small></small>
+                        <small *ngIf="industry.touched && !industry.valid"><br>*Required</small>
                       </div>
                       <div class="col-xs-3" >
                             <label for="years">Years of Experience:</label>
-                            <select id="years">
+                            <select id="years"
+                                    name="years"
+                                    ngModel>
                                     <option value="1-2">1-2</option>
                                     <option value="2-5">2-5</option>
                                     <option value="5-10">5-10</option>
                                     <option value="10-20">10-20</option>
                                     <option value="20+">20+</option>
                             </select>
-                            <small></small>
+                            
                       </div>
                       <div class="col-xs-3">
-                              <button style="width:200px;" type="submit" class="btn"  [disabled]="f.valid">Search</button>
+                              <button style="width:200px;" type="submit" class="btn"  [disabled]="!f.valid">Search</button>
                       </div>
                       
             </div>
