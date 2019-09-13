@@ -26,3 +26,6 @@ button{
     margin-left:auto;
     margin-right:auto;
 }
+#sform ::after{
+    display:table;
+}

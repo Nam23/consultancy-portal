@@ -1,9 +1,14 @@
 export class Consultant{
-    name:string;
+    id:string;
+    firstname:string;
+    lastname:string;
+    mail:string;
+    password:string;
     phone:string;
     location:string;
     qualification:string;
-    yearsOfExperience:string;
+    yearsofexperience:string;
     specialities:string;
     industry:string;
+    token:string;
 }

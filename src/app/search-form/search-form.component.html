@@ -2,12 +2,11 @@
         <form id="sform"  (ngSubmit)="onSubmit()" #f="ngForm" >
             <div class="row">
                   <div class="col-xs-3">
-                          <label for="location">Location*:</label>
+                          <label for="location">Location* :&nbsp; </label>
                           <select id="location"
                                  name="location"
                                  required
-                                 ngModel
-                                 style="width:200px;"
+                                 [(ngModel)]="p_location"
                                  #location="ngModel">
                                  <option value="Goa">Goa</option>
                                  <option value="Pune">Pune</option>
@@ -18,11 +17,11 @@
                         <small *ngIf="location.touched && !location.valid"><br>*Required</small>
                       </div>
                       <div class="col-xs-3">
-                            <label for="industry">Industry* :</label>
+                            <label for="industry">Industry* : &nbsp;</label>
                             <select id="industry"
                             name="industry"
                             required
-                            ngModel
+                            [(ngModel)]="p_industry"
                             #industry="ngModel" >
                             <option value="IT">IT</option>
                             <option value="Medicine">Medicine</option>
@@ -32,20 +31,20 @@
                         <small *ngIf="industry.touched && !industry.valid"><br>*Required</small>
                       </div>
                       <div class="col-xs-3" >
-                            <label for="years">Years of Experience:</label>
+                            <label for="years">Years of Experience :&nbsp;</label>
                             <select id="years"
                                     name="years"
-                                    ngModel>
+                                    [(ngModel)]="p_years">
                                     <option value="1-2">1-2</option>
                                     <option value="2-5">2-5</option>
                                     <option value="5-10">5-10</option>
                                     <option value="10-20">10-20</option>
                                     <option value="20+">20+</option>
                             </select>
-                            
+                                                                            
                       </div>
                       <div class="col-xs-3">
-                              <button style="width:200px;" type="submit" class="btn"  [disabled]="!f.valid">Search</button>
+                              &nbsp;<button style="width:200px;" type="submit" class="btn"  [disabled]="!f.valid">Search</button>
                       </div>
                       
             </div>

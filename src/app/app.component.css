@@ -1,0 +1,28 @@
+a {
+    cursor: pointer;
+}
+/* .footer::before {
+    content: '';
+    display: block;
+    /* height: 50px; Set same as footer's height */
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+  
+  .footer {
+    /* position: absolute;  */
+    /* bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color:white; */
+
+    height: 50px;
+    left: 0;
+    right:0;
+    bottom: 0;
+    width: 100%;
+    background-color:white;
+    text-align: center;
+  }

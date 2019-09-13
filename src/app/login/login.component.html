@@ -1,0 +1,39 @@
+<div class="outer-parent">
+<div class="parent col-md-6">
+        <h2>Login</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="username">Email</label>
+                <input type="text" formControlName="mail" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mail.errors }" />
+                <div *ngIf="submitted && f.mail.errors" style="color:white;"  class="invalid-feedback">
+                    <div *ngIf="f.mail.errors.required">Email is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                <div *ngIf="submitted && f.password.errors" style="color:white;" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                </div>
+            </div>
+            <div class="form-group" style="text-align:center">
+                <button [disabled]="loading" style="color:white" class="btn btn-primary ">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Login
+                </button>
+                <span>&nbsp;&nbsp;|&nbsp;</span>
+                <a routerLink="/register" style="color:white" class="btn btn-link">Register</a>
+            </div>
+        </form>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

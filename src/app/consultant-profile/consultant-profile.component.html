@@ -1,0 +1,176 @@
+<div class="profile" *ngIf="consultant">
+  <div class="back-header">
+  </div>
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="main-info">
+        <table>
+          <tr>
+            <td>
+              <img height="200px" width="200px"
+                src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg">
+            </td>
+            <td>
+              <div class="main-side-info">
+                <p *ngIf="allowEdit" class="edit-info"><a href="" data-toggle="tooltip" title="Edit Information"><i
+                      class="fa fa-edit"></i></a></p>
+                <p class="main-info-label">{{consultant.industry}}</p>
+                <h2>{{consultant.firstName}} &nbsp;{{consultant.lastName}}</h2>
+                <table class="icon-table">
+                  <tr>
+                    <td>
+                      <i class="fa fa-mobile"></i>
+                    </td>
+                    <td>
+                      {{consultant.phone}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="fa fa-envelope"></i>
+                    </td>
+                    <td>
+                      <a href="mailto:{{consultant.mail}}">Email now</a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="additional-info">
+        <table>
+          <tr>
+            <td>
+              <b>Address </b>
+            </td>
+            <td>
+              <b style="padding-left:80px">:</b>
+            </td>
+            <td>
+              {{consultant.location}}
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td colspan="2">
+              <hr><i>
+                Please contact the consultant directly to learn more about payment and benefits, or to schedule an
+                appointment.
+              </i>
+              <hr>
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td>
+              <b>Qualification </b>
+            </td>
+            <td>
+              <b>: </b>
+            </td>
+            <td>
+              {{consultant.qualification}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Years of Experience </b>
+            </td>
+            <td>
+              <b>: </b>
+            </td>
+            <td>
+              {{consultant.yearsofexperience}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Specialities </b>
+            </td>
+            <td>
+              <b>: </b>
+            </td>
+            <td>
+              {{consultant.specialities}}
+            </td>
+          </tr>
+
+        </table>
+
+
+      </div>
+    </div>
+    <div class="col-sm-4 ">
+      <div class="profile-map" style="text-align: center">
+        <img class="map-pic"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Maps.me_screenshot_7.0.5.png/300px-Maps.me_screenshot_7.0.5.png"
+          height="300px" width="270px">
+        <table class="map-table">
+          <tr>
+            <td>
+              Mon
+            </td>
+            <td>
+              9:30-12
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Tue
+            </td>
+            <td>
+              9:30-12
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Wed
+            </td>
+            <td>
+              9:30-12
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Thu
+            </td>
+            <td>
+              9:30-12
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Fri
+            </td>
+            <td>
+              9:30-12
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Sat
+            </td>
+            <td>
+              9:30-12
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Sun
+            </td>
+            <td>
+              Holiday
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md nav-fixed-top" id="header">
 	<div class="container">
   <!-- Brand -->
-  <a class="navbar-brand" href="#"><span>Consultant Portal</span></a>
+  <a class="navbar-brand" routerLink="/"><span>Consultant Portal</span></a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -11,15 +11,21 @@
   <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+      <li class="nav-item" style="margin-top:8px;">
+        <a routerLink="/">Home </a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="#">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Login for Consultants</a>
+      </li> -->
+      <li *ngIf="!login" class="nav-item" style="margin-top:8px;">
+        <span>&nbsp;&nbsp;</span><a routerLink="/login">Login for Consultants</a>
       </li> 
+      <li *ngIf="login" class="nav-item"  style="margin-top:8px;">
+          <span>&nbsp;&nbsp;</span><a routerLink="/consultant/{{id}}" >Welcome {{username}}</a>
+      </li>
+      <li *ngIf="login" >
+          <span>&nbsp;&nbsp;</span><button class="btn btn-lnk" (click)="logout()" >Logout</button>
+      </li>
 	   <!-- Dropdown -->
     <!-- <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">

@@ -1,15 +1,22 @@
 <app-search-form></app-search-form>
 <div class="container" >
 <div class="search-count">
-    {{consultants.length}} result(s) found
+     {{consultants.length}} result(s) found
 </div>
-<div class="result-page" style="background-color:grey;">
+<div class="result-page" >
     <ul *ngFor="let consultant of consultants">
         <li>
-            <img height="200px" width="200px"src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg"/><br>
-            Name: {{consultant.name}}<br>
+               
+            <div>
+                    <a routerLink="/consultant/{{consultant.id}}"> <img height="150px" width="200px"src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg"/></a>
+                    <div style="background-color:teal;color:white;width:200px;text-align:center">{{consultant.industry}}</div>
+            </div>
+        
+            <br>
+            <a routerLink="/consultant/{{consultant.id}}"><b> {{consultant.firstName}}&nbsp;{{consultant.lastName}}</b></a><br>
             Location:{{consultant.location}}<br>
-            Industry:{{consultant.industry}}
+            Phone:{{consultant.phone}}
+       
         </li>
     </ul>
 </div>
